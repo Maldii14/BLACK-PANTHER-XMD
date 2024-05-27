@@ -1,12 +1,12 @@
 //═══════════════════════════════════════════════════════//
 //
-//                              BLACK PANTHER MD ..., MADE BY IBRAHIM ADAMS
-//                                    IBRAHIM TECH BEST TECH EVER
+//                              vinta MD ..., MADE BY  VINTA ♨️
+//                                    BEST TECH EVER
 //
 //════════════════════════════//
 
 require('./settings')
-const { default: NexusNwIncConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: NexusNwIncConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@maldii14/baileys")
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
@@ -71,7 +71,7 @@ async function startGojoMdNx() {
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let pa7rick = await GojoMdNx.sendContact(callerId, global.owner)
-    GojoMdNx.sendMessage(callerId, { text: `Automatic Block System!\nDon't Call Bot!\nPlease Ask Or Contact The Owner To Unblock You!`}, { quoted : pa7rick })
+    GojoMdNx.sendMessage(callerId, { text: `Automatic Block System!\nDon't Call vinta!\nPlease Ask vinta To call  You!`}, { quoted : pa7rick })
     await sleep(8000)
     await GojoMdNx.updateBlockStatus(callerId, "block")
     }
